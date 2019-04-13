@@ -59,5 +59,7 @@ USER root
 
 RUN chown -R root $HOME/.config/
 
+COPY . .
+
 # Switch back to jovyan to avoid accidental container runs as root
 USER $NB_USER
