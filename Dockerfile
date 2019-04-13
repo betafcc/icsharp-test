@@ -1,11 +1,12 @@
-FROM jupyter/base-notebook
+FROM jupyter/base-notebook:4cdbc9cdb7d1
 
 USER root
 
 ENV MONO_VERSION 5.0.1.1
 
 RUN apt-get update \
-  && apt-get install -y \ 
+  && apt-get install -y \
+  gnupg2 \ 
   curl \
   git \
   && rm -rf /var/lib/apt/lists/*
